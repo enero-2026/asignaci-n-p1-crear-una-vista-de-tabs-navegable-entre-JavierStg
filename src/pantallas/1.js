@@ -2,20 +2,15 @@ import React, { useState } from "react";
 import { View, Text, ScrollView, StyleSheet, Pressable, Image } from "react-native";
 
 export default function Pantalla1() {
-  // Estado que guarda las imágenes por cada elemento
   const [imagenes, setImagenes] = useState({}); 
-  // ej: { 1: [img1, img2], 2: [img3] }
 
-  // Lista de elementos
   const elementos = Array.from({ length: 10 }, (_, i) => ({
     id: i + 1,
     texto: `Elemento ${i + 1}`,
   }));
 
-  // URL de Celso Piña
   const celsoPina = "https://imgs.search.brave.com/MakulMLqkVuDkEfvteSKFGcLe8yGOOreT1U7vDA3TrQ/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMubWlsZW5pby5j/b20vb3kyV0VUM09M/OWNfTDl1RjNqMjZ1/eGVPb3o0PS8zNDV4/MTk0L3VwbG9hZHMv/bWVkaWEvMjAxOS8w/OC8yMS9jZWxzby1w/aW5hLWRlam8tdW4t/Z3Jhbi0xXzMwXzBf/MTA0NV82NTAuanBn"
 
-  // Función que agrega la misma imagen cada vez que se presiona
   const agregarImagen = (id) => {
     setImagenes((prev) => ({
       ...prev,
